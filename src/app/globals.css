@@ -282,3 +282,24 @@ nav ul li a:hover {
   clip-path: circle(50%);
   margin-top: 20px;
 }
+
+.certification {
+  padding: 5% 0;
+}
+
+.certification-header h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.certification {
+  background-color: rgb(244, 244, 244);
+}
+
+.certification-img {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  margin-top: 3%;
+  align-items: center;
+}

@@ -187,6 +187,33 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
+
+        <section className="certification">
+          <div className="certification-header">
+            <h1>Certification</h1>
+          </div>
+
+          <div className="certification-img">
+            <div className="certification-img-first">
+              <Image
+                src={"/certification1.png"}
+                alt="certifcation"
+                width={250}
+                height={300}
+                unoptimized
+              ></Image>
+            </div>
+            <div className="certification-img-two">
+              <Image
+                src={"/certification4.png"}
+                alt="certifcation"
+                width={300}
+                height={330}
+                unoptimized
+              ></Image>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
