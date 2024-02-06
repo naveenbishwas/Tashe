@@ -163,6 +163,30 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="aero">
+          <Image
+            src={"/aero.png"}
+            alt="down"
+            width={80}
+            height={80}
+            unoptimized
+          ></Image>
+        </div>
+
+        <section className="map">
+          <div className="map-header">
+            <h1>Customers across the World</h1>
+            <p>Discover Tashe where quality knows no borders.</p>
+          </div>
+
+          <div className="map-img">
+            <iframe
+              id="map"
+              src="https://www.google.com/maps/d/embed?mid=1nNdwulUa3zVCyfnwwBmTNEX105jfjuw&ehbc=2E312F"
+            ></iframe>
+          </div>
+        </section>
       </div>
     </>
   );

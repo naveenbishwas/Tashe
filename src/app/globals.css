@@ -15,21 +15,21 @@ body {
 
 @font-face {
   font-family: "arialbi";
-  src: url("/fonts/arialbi.ttf");
+  src: url("/fonts/arialbi.ttf") format("ttf");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "calibri";
-  src: url("/fonts/calibri.ttf");
+  src: url("/fonts/calibri.ttf") format("ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "calibrib";
-  src: url("/fonts/calibrib.ttf");
+  src: url("/fonts/calibrib.ttf") format("ttf");
   font-weight: bold;
   font-style: normal;
 }
@@ -45,7 +45,9 @@ body {
 }
 
 header {
-  position: relative;
+  z-index: 1000;
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -103,7 +105,7 @@ nav ul li a:hover {
 
 .profile-header h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   padding-top: 5%;
   font-family: "Inter";
 }
@@ -219,7 +221,7 @@ nav ul li a:hover {
 
 .product-header h1 {
   font-family: "Inter";
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   margin-top: 5%;
 }
@@ -242,4 +244,41 @@ nav ul li a:hover {
 
 #finn-wall {
   object-fit: cover;
+}
+
+.map-header h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: "Inter";
+  margin-top: 11%;
+}
+
+.map-img img {
+  width: 100%;
+  height: 100vh;
+  object-fit: contain;
+  /* margin-top: 2%; */
+}
+
+#map {
+  width: 100%;
+  height: 600px;
+  margin-top: 3%;
+}
+
+.map-header p {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 24px;
+}
+
+.aero {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+.aero img {
+  clip-path: circle(50%);
+  margin-top: 20px;
 }
