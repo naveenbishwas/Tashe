@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Raleway:wght@500&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -12,6 +13,7 @@
 body {
   overflow-x: hidden;
   cursor: none;
+  padding-bottom: 20%;
 }
 
 .cursor-dot {
@@ -89,12 +91,14 @@ nav ul li a {
   margin: 25px;
   color: #fff;
   text-decoration: none;
+  cursor: none;
 }
 
 nav ul li a:hover {
   color: #0c0502;
   font-size: 22px;
   transition: 0.4s ease;
+  color: rgb(255, 156, 43);
 }
 
 .banner-img img {
@@ -227,7 +231,6 @@ nav ul li a:hover {
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
-  cursor: pointer;
 }
 
 .product-color {
@@ -271,7 +274,7 @@ nav ul li a:hover {
 .quality-assurance {
   display: flex;
   justify-content: center;
-  padding: 1% 0;
+  padding: 14px 0 1px 0;
   margin-top: 3%;
   background-color: #f96120;
   font-size: 27px;
@@ -393,7 +396,7 @@ nav ul li a:hover {
 }
 
 form input {
-  width: 300px;
+  width: 200px;
   height: 40px;
   font-size: 17px;
   padding: 3px 10px;
@@ -407,10 +410,6 @@ form svg {
   width: 30px;
   height: 30px;
 }
-
-/* form label {
-  font-size: 20px;
-} */
 
 #message {
   margin-left: 1%;
@@ -426,19 +425,20 @@ form svg {
 }
 
 .submit-btn button {
-  margin-top: 30px;
-  font-size: 18px;
-  border: 0.5px solid #000;
-  background-color: #fff;
-  padding: 5px 40px;
-  border-radius: 20px;
-  margin-left: 3%;
+  margin-top: 35px;
+  font-size: 20px;
+  padding: 6px 20px;
+  background-color: #f96120;
+  border: none;
+  color: #fff;
+  margin-left: 9%;
 }
 
 .form-header h1 {
-  margin-top: 4%;
-  margin-left: 8%;
   font-size: 3rem;
+  font-family: "Protest Strike";
+  word-spacing: 4px;
+  letter-spacing: 2px;
 }
 
 .message-f svg {
@@ -449,7 +449,59 @@ form svg {
   margin-left: 5%;
 }
 
-footer {
-  padding: 1px 0 30px 0;
+.form {
+  display: flex;
+  justify-content: space-evenly;
   background-color: #f8f8f8;
+  padding: 6% 2% 0% 2%;
+}
+
+.form-left {
+  max-width: 30%;
+}
+
+.form-top {
+  display: flex;
+  align-items: center;
+}
+
+.phone-f {
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.name-f,
+.email-f,
+.company-name-f,
+.phone-f {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-f {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: -7px;
+}
+
+.email-f {
+  margin-left: 5%;
+}
+
+.company-name-f {
+  margin-top: 20px;
+  margin-left: -5px;
+}
+
+.form-left p {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.form-left img {
+  width: 250px;
+  height: 250px;
+  margin-top: -8%;
 }
