@@ -64,7 +64,7 @@ export default function Home() {
               height={100}
               alt="Picture of the author"
             /> */}
-            <h1>Logo </h1>
+            <h1>Tashe</h1>
           </div>
           <nav>
             <ul>
