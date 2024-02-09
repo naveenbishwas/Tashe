@@ -264,7 +264,7 @@ nav ul li a:hover {
 
 .product-header h1 {
   font-family: "Inter";
-  font-size: 3rem;
+  font-size: 2.3rem;
   text-align: left;
   margin-top: 5%;
   text-transform: capitalize;
@@ -307,7 +307,7 @@ nav ul li a:hover {
 
 .map-header h1 {
   text-align: center;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Inter";
   padding-top: 3%;
 }
@@ -359,12 +359,12 @@ nav ul li a:hover {
 }
 
 .profile-trans {
-  margin-top: -15%;
+  transform: translateX(20%);
 }
 
 .profile-trans-float {
-  margin-top: 8%;
   transition: all 1.6s ease;
+  transform: translateX(0);
 }
 
 .product1 {
@@ -374,6 +374,14 @@ nav ul li a:hover {
 .product1-float {
   transform: translateX(-10%);
   transition: all 1.3s ease;
+}
+
+.product1-float:hover,
+.product2-float:hover,
+.product3-float:hover {
+  /* margin-left: -3%; */
+  transition: 0.5s ease;
+  transform: scale(1.1);
 }
 
 .product2 {
@@ -519,7 +527,7 @@ form svg {
   font-size: 21px;
 }
 
-.footer {
+.footer-df {
   display: flex;
   justify-content: space-around;
   padding: 3% 0;
@@ -585,4 +593,28 @@ form svg {
 
 #facebook {
   color: #0e87ef;
+}
+
+#footer-top {
+  margin-top: 5%;
+  width: 90%;
+  height: 1px;
+  border-color: #0080ff;
+}
+
+.footer-top-df {
+  display: flex;
+  justify-content: center;
+}
+
+#footer-bottom {
+  margin-bottom: 5%;
+  width: 90%;
+  height: 1px;
+  border-color: #0080ff;
+}
+
+.footer-bottom-df {
+  display: flex;
+  justify-content: center;
 }
