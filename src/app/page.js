@@ -316,10 +316,10 @@ export default function Home() {
               </div>
               <p>
                 Get in Touch Have questions, feedback, or just want to say
-                hello? We're here to help! Fill out the form below and we'll get
+                hello? We re here to help! Fill out the form below and we ll get
                 back to you as soon as possible. Your inquiries are important to
                 us, and we strive to provide timely and helpful responses to all
-                messages. Thank you for reaching out!"
+                messages. Thank you for reaching out!
               </p>
               <Image
                 src={"/contact-us5.png"}
