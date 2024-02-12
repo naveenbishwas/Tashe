@@ -323,7 +323,7 @@ export default function Home() {
                     <h1>Finn Walls</h1>
                   </div>
                   <p>
-                    Tashe's Corrugated fin walls are formed on a fully automatic
+                    Tashes Corrugated fin walls are formed on a fully automatic
                     folding and welding line. Our corrugated fins are passed for
                     Fatigue Test as per SANS 780:2009 at 11,000 cycles, which is
                     equivalent to 30 years of transformer life.
