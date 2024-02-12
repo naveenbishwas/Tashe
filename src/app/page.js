@@ -164,6 +164,45 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="quality-assurance">
+          <p>
+            Quality assurance is most importanct for us. All tanks and fill
+            walls are subject to stringnet inspecetion.
+          </p>
+        </div>
+
+        <section
+          ref={trustRef}
+          className={`trust-icons ${isVisible ? "visible" : ""}`}
+        >
+          <div className="trust-icons-df">
+            <div className="orders">
+              <h4>No. of Transformers Order</h4>
+              <h2 className="num" data-val="100">
+                {isVisible && "100"}
+              </h2>
+            </div>
+            <div className="satisfied">
+              <h4>Satisfied Customer</h4>
+              <h2 className="num" data-val="200">
+                000
+              </h2>
+            </div>
+            <div className="employee">
+              <h4>Satisfied Employee</h4>
+              <h2 className="num" data-val="300">
+                000
+              </h2>
+            </div>
+            <div className="location">
+              <h4>Location where we have customers</h4>
+              <h2 className="num" data-val="440">
+                000
+              </h2>
+            </div>
+          </div>
+        </section>
+
         <section className="profile">
           <div className="profile-info">
             <div className="profile-info-left">
@@ -409,45 +448,6 @@ export default function Home() {
               width={100}
               unoptimized
             ></Image>
-          </div>
-        </section>
-
-        <div className="quality-assurance">
-          <p>
-            Quality assurance is most importanct for us. All tanks and fill
-            walls are subject to stringnet inspecetion.
-          </p>
-        </div>
-
-        <section
-          ref={trustRef}
-          className={`trust-icons ${isVisible ? "visible" : ""}`}
-        >
-          <div className="trust-icons-df">
-            <div className="orders">
-              <h4>No. of Transformers Order</h4>
-              <h2 className="num" data-val="100">
-                {isVisible && "100"}
-              </h2>
-            </div>
-            <div className="satisfied">
-              <h4>Satisfied Customer</h4>
-              <h2 className="num" data-val="200">
-                000
-              </h2>
-            </div>
-            <div className="employee">
-              <h4>Satisfied Employee</h4>
-              <h2 className="num" data-val="300">
-                000
-              </h2>
-            </div>
-            <div className="location">
-              <h4>Location where we have customers</h4>
-              <h2 className="num" data-val="440">
-                000
-              </h2>
-            </div>
           </div>
         </section>
 
