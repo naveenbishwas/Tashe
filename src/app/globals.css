@@ -1,10 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Raleway:wght@500&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Catamaran&family=Dosis:wght@300&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Archivo:ital,wght@1,600&family=Catamaran&family=Dosis:wght@300&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
+
 * {
   padding: 0;
   margin: 0;
-  font-family: "calibri";
+  /* font-family: "Roboto Slab"; */
+  font-family: "Abel";
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
@@ -12,7 +20,6 @@
 
 body {
   overflow-x: hidden;
-  cursor: none;
 }
 
 .cursor-dot {
@@ -39,24 +46,31 @@ body {
 }
 
 @font-face {
-  font-family: "arialbi";
-  src: url("/fonts/arialbi.ttf") format("ttf");
+  font-family: "calibribi";
+  src: url("/tashe/public/fonts/calibri-bold-italic.ttf");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "calibri";
-  src: url("/fonts/calibri.ttf") format("ttf");
+  src: url("/tashe/public/fonts/calibri-regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "calibrib";
-  src: url("/fonts/calibrib.ttf") format("ttf");
+  src: url("/tashe/public/fonts/calibri-bold.ttf");
   font-weight: bold;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "calibrit";
+  src: url("/tashe/public/fonts/calibri-italic.ttf");
+  font-weight: normal;
+  font-style: italic;
 }
 
 .logo img {
@@ -66,7 +80,7 @@ body {
 }
 
 .logo {
-  color: #fff;
+  color: #ffffff;
 }
 
 header {
@@ -75,9 +89,28 @@ header {
   top: 0;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  background-color: #015fa1;
+  align-items: baseline;
   padding: 21px 3px 4px 3px;
+  width: 100%;
+}
+
+.nav-scrolled {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: rgb(255 141 9 / 24%) 0px 3px 8px;
+  align-items: baseline;
+  padding: 21px 3px 4px 3px;
+  width: 100%;
+  color: #000000;
+}
+
+.nav-scrolled nav ul li a,
+.nav-scrolled .logo {
+  color: #015fa1;
 }
 
 nav ul {
@@ -88,31 +121,40 @@ nav ul {
 nav ul li a {
   font-size: 20px;
   margin: 25px;
-  color: #fff;
+  color: #ffffff;
   text-decoration: none;
-  cursor: none;
 }
 
 nav ul li a:hover {
-  color: #0c0502;
-  font-size: 22px;
+  font-size: 21px;
   transition: 0.4s ease;
-  color: rgb(255, 156, 43);
+  color: #f1850a;
+}
+
+nav ul li a:hover::before {
+  border: #f1850a;
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  width: 60px;
+  border: 1px solid;
+  transition: all 0.1s ease;
 }
 
 .banner-img img {
   width: 100%;
-  height: 700px;
+  height: 745px;
 }
 
 .banner {
   position: relative;
+  margin-top: -9%;
 }
 
 .banner-color {
   width: 100vw;
   height: 100%;
-  background-color: #000000;
+  background-color: #358cff;
   opacity: 0.3;
   position: absolute;
   top: 0;
@@ -133,7 +175,6 @@ nav ul li a:hover {
 
 .profile-header h1 {
   font-size: 3rem;
-  font-family: "Inter";
 }
 
 .profile-info-left-one img {
@@ -177,9 +218,10 @@ nav ul li a:hover {
 }
 
 .profile-info-right p {
-  margin-top: 20px;
-  font-size: 20px;
+  font-size: 18px;
+  word-spacing: 2px;
   line-height: 1.4;
+  font-family: Catamaran;
 }
 
 .profile-info-right p:first-of-type {
@@ -188,7 +230,7 @@ nav ul li a:hover {
 
 .profile-info-right button {
   margin-top: 35px;
-  font-size: 20px;
+  font-size: 14px;
   padding: 10px 20px;
   background-color: #f96120;
   border: none;
@@ -196,11 +238,11 @@ nav ul li a:hover {
 }
 
 .profile-info-right button:hover {
-  background-color: #fa7e49;
+  background-color: #f1850a;
   color: #fff;
   transition: 0.4s ease;
   border: none;
-  font-size: 22px;
+  font-size: 15px;
 }
 
 .profile {
@@ -219,30 +261,69 @@ nav ul li a:hover {
 }
 
 .product-image img {
-  width: 80%;
-  height: 350px;
+  width: 27%;
+  height: 38%;
   margin-left: 10%;
 }
 
+.product-details button {
+  margin-left: 5px;
+  margin-top: 15px;
+  font-size: 17px;
+  padding: 5px 20px;
+  background-color: #f96120;
+  border: none;
+  color: #fff;
+}
+
+.product-details {
+  margin-left: -50%;
+}
+
+.product-details h3 {
+  font-size: 2.2rem;
+  font-weight: bolder;
+}
+
+.product-details ul li {
+  font-size: 19px;
+  margin-top: 10px;
+  list-style: disc;
+}
+
+.product-details ul {
+  margin-left: -2%;
+  margin-top: 4%;
+}
+
+#product3-detail {
+  margin-left: 20%;
+}
+
+.product3-show img {
+  width: 70%;
+  height: 50%;
+  margin-left: 37%;
+}
+
+#product3-detail p {
+  margin-left: 0;
+  margin-top: 19px;
+  max-width: 80%;
+  font-size: 19px;
+}
+
+.product3-detail-header h1 {
+  font-size: 2.6rem;
+  font-weight: bolder;
+}
+
 .product-df > div {
+  padding: 4%;
   display: flex;
-  flex-direction: column;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: relative;
-}
-
-.product-color {
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
 }
 
 .product-color h1 {
@@ -257,27 +338,34 @@ nav ul li a:hover {
 }
 
 .product-df {
-  display: flex;
-  justify-content: space-evenly;
-  margin-top: 5%;
+  /* display: flex;
+  justify-content: space-evenly; */
+  /* margin-top: 5%; */
 }
 
 .product-header h1 {
-  font-family: "Inter";
-  font-size: 2.3rem;
+  font-weight: bolder;
+  font-size: 2.6rem;
   text-align: left;
   margin-top: 5%;
+  margin-bottom: 3%;
   text-transform: capitalize;
-  margin-left: 7%;
+  margin-left: 5%;
 }
+
 .quality-assurance {
   display: flex;
   justify-content: center;
-  padding: 14px 0 1px 0;
+  padding: 10px 0 10px 0;
   margin-top: 3%;
-  background-color: #f96120;
-  font-size: 27px;
+  background-color: #015fa1;
+  font-size: 19px;
+  word-spacing: 2px;
   color: #fff;
+}
+
+.quality-assurance p {
+  margin-bottom: 0;
 }
 
 .product-text {
@@ -292,7 +380,6 @@ nav ul li a:hover {
 }
 
 .product-text h4 {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
 }
 
@@ -307,8 +394,8 @@ nav ul li a:hover {
 
 .map-header h1 {
   text-align: center;
-  font-size: 3rem;
-  font-family: "Inter";
+  font-weight: bolder;
+  font-size: 2.4rem;
   padding-top: 3%;
 }
 
@@ -368,38 +455,56 @@ nav ul li a:hover {
 }
 
 .product1 {
-  transform: translateX(-30%);
+  display: flex;
 }
 
 .product1-float {
-  transform: translateX(-10%);
   transition: all 1.3s ease;
+  display: flex;
+}
+
+.product-df .product3 {
+  display: none;
+}
+
+.product-df .product3-show {
+  display: flex;
+}
+
+.product-details p {
+  max-width: 69%;
+  margin-left: 18%;
 }
 
 .product1-float:hover,
 .product2-float:hover,
 .product3-float:hover {
   /* margin-left: -3%; */
-  transition: 0.5s ease;
-  transform: scale(1.1);
+  /* transition: 0.5s ease;
+  transform: scale(1.1); */
 }
 
-.product2 {
-  transform: translateX(10%);
+.product-df .product2 {
+  transition: all 1s ease;
+  display: none;
 }
 
-.product2-float {
-  transform: translateX(0%);
+.product-df .product-show {
+  display: flex;
+}
+
+.product-df .product2-show {
+  display: flex;
+}
+
+.product-df .product2-float {
+  transform: translateX(0);
   transition: all 1s ease;
 }
 
-.product3 {
-  transform: translateX(40%);
-}
-
-.product3-float {
+.product-df .product3-float {
   transform: translateX(0);
-  transition: all 1.3s ease;
+  transition: all 1s ease;
 }
 
 form input {
@@ -443,9 +548,9 @@ form svg {
 
 .form-header h1 {
   font-size: 3rem;
-  font-family: "Protest Strike";
-  word-spacing: 4px;
-  letter-spacing: 2px;
+  word-spacing: 0px;
+  letter-spacing: -1px;
+  font-weight: bolder;
 }
 
 .message-f svg {
@@ -460,11 +565,14 @@ form svg {
   display: flex;
   justify-content: space-evenly;
   background-color: #f8f8f8;
-  padding: 6% 2% 0% 2%;
+  padding: 6% 2% 6% 2%;
 }
 
 .form-left {
   max-width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: -2%;
 }
 
 .form-top {
@@ -503,8 +611,8 @@ form svg {
 }
 
 .form-left p {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 18px;
+  margin-top: 5px;
 }
 
 .form-left img {
@@ -545,6 +653,11 @@ form svg {
 .footer-contact li {
   font-size: 17px;
   margin-top: 10px;
+  font-family: "Catamaran";
+}
+
+.footer-contact li:first-of-type {
+  margin-top: 5%;
 }
 
 .footer-follow-us {
@@ -559,8 +672,8 @@ form svg {
 }
 
 .fotter-servcie li {
-  margin-top: 10px;
-  font-size: 18px;
+  margin-top: 23px;
+  font-size: 16px;
 }
 
 .fotter-servcie li:hover {
@@ -568,11 +681,12 @@ form svg {
 }
 
 .fotter-servcie li:first-of-type {
-  margin-top: 2%;
+  margin-top: 27%;
 }
 
 .footer h3 {
-  font-weight: bolder;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .footer-qr {
@@ -580,7 +694,7 @@ form svg {
 }
 
 #footer-email {
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 #linkedin {
@@ -608,7 +722,6 @@ form svg {
 }
 
 #footer-bottom {
-  margin-bottom: 5%;
   width: 90%;
   height: 1px;
   border-color: #0080ff;
@@ -617,4 +730,139 @@ form svg {
 .footer-bottom-df {
   display: flex;
   justify-content: center;
+}
+
+.trust-icons-df {
+  padding: 7% 0 3% 0;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  align-items: flex-start;
+}
+
+.trust-icons-df > div {
+  text-align: center;
+  width: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.num {
+  font-size: 3rem;
+  color: #f28409;
+}
+
+.num::after {
+  content: "+";
+}
+
+.product-option {
+  display: flex;
+}
+
+.option {
+  width: 500px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(1 95 161);
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.selected {
+  background-color: #f96120;
+  color: #fff;
+}
+
+.option-active {
+  background-color: #f96120;
+  color: #fff;
+  width: 500px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.product2-detail-header h1 {
+  margin-left: 18%;
+  font-size: 2.6rem;
+  font-weight: bolder;
+}
+
+#product2-detail button {
+  margin-left: 18%;
+}
+
+#finn-wall {
+  width: 100%;
+  margin-left: 25%;
+}
+
+#product2-detail {
+  text-align: left;
+  margin-left: 8%;
+}
+
+#product2-detail p {
+  font-size: 19px;
+}
+
+#product2-detail p:first-of-type {
+  margin-top: 30px;
+}
+
+#option1::after {
+  content: "";
+  height: 65px;
+  position: absolute;
+  top: -14px;
+  right: 0%;
+  border: 1px solid #ffffff;
+  z-index: 1;
+}
+
+#option2::after {
+  content: "";
+  height: 66px;
+  position: absolute;
+  top: -14px;
+  right: 0%;
+  border: 1px solid #ffffff;
+  z-index: 1;
+}
+
+.orders,
+.employee,
+.satisfied,
+.location {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.location {
+  width: 350px;
+}
+
+.orders::after,
+.employee::after,
+.satisfied::after {
+  content: "";
+  width: 1px;
+  height: 130px;
+  border: 0.5px solid #cecece;
+  position: absolute;
+  top: 5%;
+  right: -15%;
+}
+
+.trust-icons-df h4 {
+  color: #054d84;
+  font-weight: bolder;
 }
