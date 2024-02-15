@@ -4,18 +4,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@1,600&family=Catamaran&family=Dosis:wght@300&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Archivo:ital,wght@1,600&family=Catamaran&family=Dosis:wght@300&family=Inter:wght@500&family=Oswald&family=Pacifico&family=Poppins:wght@600&family=Protest+Riot&family=Protest+Strike&family=Raleway:wght@500&family=Roboto+Slab&family=Rubik:ital,wght@0,500;0,600;1,500&display=swap");
 
 * {
   padding: 0;
   margin: 0;
-  /* font-family: "Roboto Slab"; */
   font-family: "Abel";
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
+}
+
+:root {
+  --heading-font: "Mulish";
 }
 
 body {
@@ -92,6 +95,7 @@ header {
   align-items: baseline;
   padding: 21px 3px 4px 3px;
   width: 100%;
+  transition: all 0.2s ease-in;
 }
 
 .nav-scrolled {
@@ -106,6 +110,7 @@ header {
   padding: 21px 3px 4px 3px;
   width: 100%;
   color: #000000;
+  transition: all 0.1s ease-in;
 }
 
 .nav-scrolled nav ul li a,
@@ -126,7 +131,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  font-size: 21px;
   transition: 0.4s ease;
   color: #f1850a;
 }
@@ -162,19 +166,21 @@ nav ul li a:hover::before {
 
 .banner-text {
   position: absolute;
-  top: 35%;
-  left: 23%;
+  top: 44%;
+  left: 20%;
   z-index: 1;
 }
 
 .banner-text h1 {
   color: #ffffff;
-  font-size: 6rem;
-  font-family: "Inter";
+  font-size: 6.2rem;
+  font-family: var(--heading-font);
 }
 
 .profile-header h1 {
   font-size: 3rem;
+  font-weight: bolder;
+  font-family: var(--heading-font);
 }
 
 .profile-info-left-one img {
@@ -283,6 +289,7 @@ nav ul li a:hover::before {
 .product-details h3 {
   font-size: 2.2rem;
   font-weight: bolder;
+  font-family: var(--heading-font);
 }
 
 .product-details ul li {
@@ -348,18 +355,18 @@ nav ul li a:hover::before {
   font-size: 2.6rem;
   text-align: left;
   margin-top: 5%;
-  margin-bottom: 3%;
+  margin-bottom: 1%;
   text-transform: capitalize;
   margin-left: 5%;
+  font-family: var(--heading-font);
 }
 
 .quality-assurance {
   display: flex;
   justify-content: center;
-  padding: 10px 0 10px 0;
-  margin-top: 3%;
+  padding: 13px 0;
   background-color: #015fa1;
-  font-size: 19px;
+  font-size: 22px;
   word-spacing: 2px;
   color: #fff;
 }
@@ -390,19 +397,19 @@ nav ul li a:hover::before {
 .map {
   margin-top: 2%;
   background-color: #f3f1f1;
+  position: relative;
+}
+
+.review-right-line h2 {
+  font-family: var(--heading-font);
 }
 
 .map-header h1 {
+  font-family: var(--heading-font);
   text-align: center;
   font-weight: bolder;
   font-size: 2.4rem;
   padding-top: 3%;
-}
-
-.map-img img {
-  width: 100%;
-  height: 700px;
-  object-fit: contain;
 }
 
 #map {
@@ -417,10 +424,109 @@ nav ul li a:hover::before {
   font-size: 24px;
 }
 
+#marker-one {
+  position: absolute;
+  top: 50%;
+  right: 37%;
+  width: 30px;
+  height: 30px;
+}
+
+#marker-two {
+  position: absolute;
+  top: 40%;
+  right: 43%;
+  width: 30px;
+  height: 30px;
+}
+
+.information-one,
+.information-two,
+.information-three {
+  width: 32%;
+  height: 450px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  padding: 5px;
+}
+
+.information-one-overlap-details h4,
+.information-two-overlap-details h4,
+.information-three-overlap-details h4 {
+  margin-top: 20px;
+  font-weight: bolder;
+  max-width: 70%;
+  margin-left: 16%;
+  color: #f1850a;
+}
+
+.information-one-overlap-details p,
+.information-two-overlap-details p,
+.information-three-overlap-details p {
+  margin-top: 20px;
+  max-width: 70%;
+  margin-left: 16%;
+}
+
+.information-one-overlap-img img,
+.information-two-overlap-img img,
+.information-three-overlap-img img {
+  width: 70%;
+  height: 200px;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.review {
+  display: flex;
+  justify-content: center;
+  margin: 2% 0;
+}
+
+.review-max {
+  /* background-color: rgb(224, 241, 255); */
+  margin-top: 5%;
+  width: 70%;
+  height: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
+}
+
+.review-left {
+  height: 300px;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2%;
+}
+
+.review-left img {
+  width: 220px;
+  height: 150px;
+}
+
+.review-right {
+  max-width: 40%;
+}
+
+.review-right-line h2 {
+  font-weight: bolder;
+}
+
+.review-right-line p {
+  margin-top: 25px;
+}
+
 .aero {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
+  margin-top: 1%;
 }
 
 .aero img {
@@ -435,6 +541,7 @@ nav ul li a:hover::before {
 .certification-header h1 {
   font-size: 3rem;
   text-align: center;
+  font-family: var(--heading-font);
 }
 
 .certification-img {
@@ -551,6 +658,7 @@ form svg {
   word-spacing: 0px;
   letter-spacing: -1px;
   font-weight: bolder;
+  font-family: var(--heading-font);
 }
 
 .message-f svg {
@@ -687,6 +795,7 @@ form svg {
 .footer h3 {
   font-size: 20px;
   font-weight: bold;
+  font-family: var(--heading-font);
 }
 
 .footer-qr {
@@ -733,7 +842,7 @@ form svg {
 }
 
 .trust-icons-df {
-  padding: 7% 0 3% 0;
+  padding: 4% 0 3% 0;
   display: flex;
   justify-content: center;
   gap: 5%;
@@ -815,6 +924,10 @@ form svg {
 
 #product2-detail p:first-of-type {
   margin-top: 30px;
+}
+
+#option1 {
+  background-color: #f96120;
 }
 
 #option1::after {
