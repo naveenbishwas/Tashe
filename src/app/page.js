@@ -259,7 +259,8 @@ export default function Home() {
                 }`}
               >
                 <div className="profile-header">
-                  <h1>Why Work wih Tashe</h1>
+                  <div className="profile-header-blue"></div>
+                  <h1>Why Work with Tashe</h1>
                 </div>
                 <p>
                   We are one of the first companies in India to manufacture

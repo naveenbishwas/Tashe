@@ -176,6 +176,18 @@ nav ul li a:hover::before {
   font-family: var(--heading-font);
 }
 
+.profile-header-blue {
+  width: 6px;
+  height: 30px;
+  background-color: #0080ff;
+}
+
+.profile-header {
+  display: flex;
+  align-content: center;
+  gap: 2%;
+}
+
 .profile-header h1 {
   font-size: 2rem;
   font-weight: bolder;
@@ -214,7 +226,7 @@ nav ul li a:hover::before {
 .profile-info {
   display: flex;
   justify-content: space-around;
-  padding-top: 5%;
+  padding-top: 3%;
 }
 
 .profile-info-right,
@@ -356,6 +368,17 @@ nav ul li a:hover::before {
   text-transform: capitalize;
   margin-left: 5%;
   font-family: var(--heading-font);
+  position: relative;
+}
+
+.product-header h1::before {
+  content: "";
+  width: 6px;
+  height: 32px;
+  background-color: #0080ff;
+  position: absolute;
+  top: 0;
+  left: -13px;
 }
 
 .quality-assurance {
@@ -501,6 +524,17 @@ nav ul li a:hover::before {
   font-weight: bolder;
   font-family: var(--heading-font);
   margin-top: 10%;
+  position: relative;
+}
+
+.review-header h1::before {
+  content: "";
+  width: 6px;
+  height: 32px;
+  background-color: #0080ff;
+  position: absolute;
+  top: 0;
+  left: -13px;
 }
 
 .review-max {
