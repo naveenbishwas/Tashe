@@ -11,14 +11,14 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Abel";
+  font-family: "Calibri";
   text-decoration: none;
   list-style: none;
   box-sizing: border-box;
 }
 
 :root {
-  --heading-font: "Mulish";
+  --heading-font: "calibrib";
 }
 
 body {
@@ -50,40 +50,39 @@ body {
 
 @font-face {
   font-family: "calibribi";
-  src: url("/tashe/public/fonts/calibri-bold-italic.ttf");
+  src: url("/fonts/calibri-bold-italic.ttf");
   font-weight: bold;
   font-style: italic;
 }
 
 @font-face {
   font-family: "calibri";
-  src: url("/tashe/public/fonts/calibri-regular.ttf");
+  src: url("/fonts/calibri-regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "calibrib";
-  src: url("/tashe/public/fonts/calibri-bold.ttf");
+  src: url("/fonts/calibri-bold.ttf");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "calibrit";
-  src: url("/tashe/public/fonts/calibri-italic.ttf");
+  src: url("/fonts/calibri-italic.ttf");
   font-weight: normal;
   font-style: italic;
 }
 
 .logo img {
-  /* position: absolute; */
   margin-top: 3%;
   object-fit: contain;
 }
 
-.logo {
-  color: #ffffff;
+.logo img {
+  margin-top: -10px;
 }
 
 header {
@@ -158,7 +157,7 @@ nav ul li a:hover::before {
 .banner-color {
   width: 100vw;
   height: 100%;
-  background-color: #358cff;
+  background-color: #000000;
   opacity: 0.3;
   position: absolute;
   top: 0;
@@ -173,12 +172,12 @@ nav ul li a:hover::before {
 
 .banner-text h1 {
   color: #ffffff;
-  font-size: 6.2rem;
+  font-size: 7rem;
   font-family: var(--heading-font);
 }
 
 .profile-header h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bolder;
   font-family: var(--heading-font);
 }
@@ -225,9 +224,6 @@ nav ul li a:hover::before {
 
 .profile-info-right p {
   font-size: 18px;
-  word-spacing: 2px;
-  line-height: 1.4;
-  font-family: Catamaran;
 }
 
 .profile-info-right p:first-of-type {
@@ -236,8 +232,8 @@ nav ul li a:hover::before {
 
 .profile-info-right button {
   margin-top: 35px;
-  font-size: 14px;
-  padding: 10px 20px;
+  font-size: 16px;
+  padding: 7px 15px;
   background-color: #f96120;
   border: none;
   color: #fff;
@@ -252,7 +248,6 @@ nav ul li a:hover::before {
 }
 
 .profile {
-  background-color: rgb(244, 244, 244);
   padding-bottom: 7%;
 }
 
@@ -283,13 +278,14 @@ nav ul li a:hover::before {
 }
 
 .product-details {
-  margin-left: -50%;
+  margin-left: -60%;
 }
 
 .product-details h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   font-weight: bolder;
-  font-family: var(--heading-font);
+  /* font-family: var(--heading-font); */
+  font-family: "calibribi";
 }
 
 .product-details ul li {
@@ -321,7 +317,8 @@ nav ul li a:hover::before {
 }
 
 .product3-detail-header h1 {
-  font-size: 2.6rem;
+  font-family: "calibribi";
+  font-size: 1.8rem;
   font-weight: bolder;
 }
 
@@ -352,7 +349,7 @@ nav ul li a:hover::before {
 
 .product-header h1 {
   font-weight: bolder;
-  font-size: 2.6rem;
+  font-size: 2rem;
   text-align: left;
   margin-top: 5%;
   margin-bottom: 1%;
@@ -487,16 +484,31 @@ nav ul li a:hover::before {
   margin: 2% 0;
 }
 
-.review-max {
+.review-df {
   /* background-color: rgb(224, 241, 255); */
   margin-top: 5%;
   width: 70%;
-  height: 400px;
+  height: 500px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   display: flex;
-  justify-content: center;
-  gap: 5%;
+  flex-direction: column;
   align-items: center;
+}
+
+.review-header h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: var(--heading-font);
+  margin-top: 10%;
+}
+
+.review-max {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4%;
+  gap: 5%;
 }
 
 .review-left {
@@ -583,14 +595,6 @@ nav ul li a:hover::before {
   margin-left: 18%;
 }
 
-.product1-float:hover,
-.product2-float:hover,
-.product3-float:hover {
-  /* margin-left: -3%; */
-  /* transition: 0.5s ease;
-  transform: scale(1.1); */
-}
-
 .product-df .product2 {
   transition: all 1s ease;
   display: none;
@@ -615,14 +619,22 @@ nav ul li a:hover::before {
 }
 
 form input {
-  width: 200px;
-  height: 40px;
-  font-size: 17px;
-  padding: 3px 10px;
+  width: 350px;
+  height: 45px;
+  font-size: 20px;
+  padding: 3px 10px 3px 15px;
   margin-top: 2%;
-  margin-left: 1%;
-  border-radius: 10px;
-  border: 1px solid #000;
+  border: 1px solid #a4a4a4;
+  text-transform: lowercase;
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="tel"]::placeholder,
+#message::placeholder {
+  color: rgb(3, 3, 3);
+  font-weight: 300;
+  font-size: 16px;
 }
 
 form svg {
@@ -643,14 +655,18 @@ form svg {
   margin-top: 1%;
 }
 
+.submit-btn {
+  display: flex;
+  justify-content: center;
+}
+
 .submit-btn button {
-  margin-top: 35px;
+  margin-top: 25px;
   font-size: 20px;
   padding: 6px 20px;
   background-color: #f96120;
   border: none;
   color: #fff;
-  margin-left: 9%;
 }
 
 .form-header h1 {
@@ -665,15 +681,13 @@ form svg {
   margin-top: 5%;
 }
 
-.needs-validation {
-  margin-left: 5%;
-}
-
 .form {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   background-color: #f8f8f8;
   padding: 6% 2% 6% 2%;
+  position: relative;
 }
 
 .form-left {
@@ -683,9 +697,15 @@ form svg {
   margin-top: -2%;
 }
 
-.form-top {
-  display: flex;
-  align-items: center;
+.form-right-overlap {
+  width: 400px;
+  height: 560px;
+  border-radius: 13px;
+  background-color: #15498c;
+  position: absolute;
+  top: 10%;
+  left: 59%;
+  z-index: 1;
 }
 
 .phone-f {
@@ -693,13 +713,12 @@ form svg {
   margin-left: -5px;
 }
 
-.name-f,
-.email-f,
-.company-name-f,
-.phone-f {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.form-top {
+  margin-left: -2%;
+}
+
+.email-f {
+  margin-top: 5%;
 }
 
 .message-f {
@@ -707,10 +726,6 @@ form svg {
   gap: 10px;
   margin-top: 20px;
   margin-left: -7px;
-}
-
-.email-f {
-  margin-left: 5%;
 }
 
 .company-name-f {
@@ -727,6 +742,16 @@ form svg {
   width: 250px;
   height: 250px;
   margin-top: -8%;
+  display: none;
+}
+
+.form-right {
+  background-color: #fff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 30px 50px;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
 }
 
 .footer-follow-us span {
@@ -756,6 +781,7 @@ form svg {
 
 .footer-contact b {
   text-transform: uppercase;
+  font-family: "calibrib";
 }
 
 .footer-contact li {
@@ -900,8 +926,9 @@ form svg {
 
 .product2-detail-header h1 {
   margin-left: 18%;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: bolder;
+  font-family: "calibribi";
 }
 
 #product2-detail button {
@@ -925,10 +952,10 @@ form svg {
 #product2-detail p:first-of-type {
   margin-top: 30px;
 }
-
+/* 
 #option1 {
   background-color: #f96120;
-}
+} */
 
 #option1::after {
   content: "";
@@ -971,11 +998,20 @@ form svg {
   height: 130px;
   border: 0.5px solid #cecece;
   position: absolute;
-  top: 5%;
+  top: -15%;
   right: -15%;
 }
 
 .trust-icons-df h4 {
+  font-size: 20px;
   color: #054d84;
   font-weight: bolder;
+}
+
+.review-right h2 {
+  font-family: "calibribi";
+}
+
+.review-left h1 {
+  margin-top: 18px;
 }

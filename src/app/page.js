@@ -33,6 +33,10 @@ export default function Home() {
     threshold: 0,
   });
 
+  const { ref: profileRight, inView: profileRightVisible } = useInView({
+    threshold: 0,
+  });
+
   useEffect(() => {
     if (trustVisible) {
       setIsVisible(true);
@@ -44,7 +48,7 @@ export default function Home() {
     const sectionOne = document.querySelector(".banner");
 
     const sectionOneOptions = {
-      rootMargin: "-200px 0px 0px 0px",
+      rootMargin: "-600px 0px 0px 0px",
     };
 
     const sectionOneObserver = new IntersectionObserver(function (
@@ -63,7 +67,6 @@ export default function Home() {
 
     sectionOneObserver.observe(sectionOne);
 
-    // Cleanup function
     return () => {
       sectionOneObserver.unobserve(sectionOne);
     };
@@ -131,13 +134,13 @@ export default function Home() {
       <div className="main-conatiner">
         <header>
           <div className="logo">
-            {/* <Image
-              src="/tashe.png"
-              width={200}
-              height={100}
-              alt="Picture of the author"
-            /> */}
-            <h1>Tashe</h1>
+            <Image
+              src={"/tashe5.png"}
+              alt="logo"
+              width={100}
+              height={80}
+              unoptimized
+            ></Image>
           </div>
           <nav>
             <ul>
@@ -323,6 +326,7 @@ export default function Home() {
               <h4>Tank Walls</h4>
             </div>
           </div>
+
           <div className="product-df">
             {isCoruggated ? (
               <div className="product1">
@@ -349,8 +353,16 @@ export default function Home() {
                     <li>Oil cleaning is easier and economical</li>
                     <li>No blockage of oil flow into the fins</li>
                   </ul>
-                  <div className="product-details-button">
-                    <button>Learn More</button>
+                  <div ref={profileRight} className="product-details-button">
+                    <button
+                      className={`${
+                        profileRightVisible
+                          ? "animate__animated animate__jello"
+                          : "animate__animated animate__jello"
+                      }`}
+                    >
+                      Learn More
+                    </button>
                   </div>
                 </div>
               </div>
@@ -631,27 +643,33 @@ export default function Home() {
         </section>
 
         <section className="review">
-          <div className="review-max">
-            <div className="review-left">
-              <Image
-                src={"/workers.jpg"}
-                alt=""
-                width={100}
-                height={100}
-                unoptimized
-              ></Image>
-              <h1>Heading</h1>
-              <h4>Sub-Heading</h4>
+          <div className="review-df">
+            <div className="review-header">
+              <h1>What our customer say about us</h1>
             </div>
-            <div className="review-right">
-              <div className="review-right-line"></div>
-              <h2>Client Review</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-                optio culpa corrupti ex deleniti repellendus sit, accusamus
-                recusandae ipsum ratione repudiandae quo hic blanditiis sequi
-                deserunt quibusdam, enim dolores minus?
-              </p>
+
+            <div className="review-max">
+              <div className="review-left">
+                <Image
+                  src={"/workers.jpg"}
+                  alt=""
+                  width={100}
+                  height={100}
+                  unoptimized
+                ></Image>
+                <h1>Heading</h1>
+                <h4>Sub-Heading</h4>
+              </div>
+              <div className="review-right">
+                <div className="review-right-line"></div>
+                <h2>Client Name</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  optio culpa corrupti ex deleniti repellendus sit, accusamus
+                  recusandae ipsum ratione repudiandae quo hic blanditiis sequi
+                  deserunt quibusdam, enim dolores minus?
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -705,94 +723,32 @@ export default function Home() {
                 unoptimized
               ></Image>
             </div>
+            <div className="form-right-overlap"></div>
+
             <div className="form-right">
               <form action="" className="needs-validation">
                 <div className="form-top">
                   <div className="name-f was-validated">
-                    {/* <label htmlFor="name">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-person-circle"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                    <path
-                      fill-rule="evenodd"
-                      d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                    />
-                  </svg>
-                  Name
-                </label> */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-person-circle"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-                      <path
-                        fill-rule="evenodd"
-                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
-                      />
-                    </svg>
                     <input
                       type="text"
                       name=""
                       id="name"
-                      placeholder="Name"
+                      placeholder="Your Name"
                       required
                     />
                   </div>
 
                   <div className="email-f was-validated">
-                    {/* <label htmlFor="email">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-envelope-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                  </svg>
-                  Email
-                </label> */}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
-                      fill="currentColor"
-                      class="bi bi-envelope-fill"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                    </svg>
                     <input
                       type="email"
                       name=""
                       id="email"
-                      placeholder="Email"
+                      placeholder="example@gmail.com"
                       required
                     />
                   </div>
                 </div>
                 <div className="company-name-f was-validated">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-buildings-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M15 .5a.5.5 0 0 0-.724-.447l-8 4A.5.5 0 0 0 6 4.5v3.14L.342 9.526A.5.5 0 0 0 0 10v5.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V14h1v1.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zM2 11h1v1H2zm2 0h1v1H4zm-1 2v1H2v-1zm1 0h1v1H4zm9-10v1h-1V3zM8 5h1v1H8zm1 2v1H8V7zM8 9h1v1H8zm2 0h1v1h-1zm-1 2v1H8v-1zm1 0h1v1h-1zm3-2v1h-1V9zm-1 2h1v1h-1zm-2-4h1v1h-1zm3 0v1h-1V7zm-2-2v1h-1V5zm1 0h1v1h-1z" />
-                  </svg>
                   <input
                     type="text"
                     name=""
@@ -803,19 +759,6 @@ export default function Home() {
                 </div>
 
                 <div className="phone-f was-validated">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-telephone-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"
-                    />
-                  </svg>
                   <input
                     type="tel"
                     name=""
@@ -826,26 +769,25 @@ export default function Home() {
                 </div>
 
                 <div className="message-f was-validated">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-chat-right-dots-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 1 0-2 1 1 0 0 1 0 2" />
-                  </svg>
                   <textarea
                     name=""
                     id="message"
-                    cols="33"
+                    cols="39"
                     rows="5"
-                    placeholder="message..."
+                    placeholder="your message here..."
                   ></textarea>
                 </div>
                 <div className="submit-btn">
-                  <button>Submit</button>
+                  <button
+                    ref={profileButton}
+                    className={`${
+                      profileButtonIsVisible
+                        ? "animate__animated animate__jello"
+                        : ""
+                    }`}
+                  >
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
@@ -889,9 +831,7 @@ export default function Home() {
               </li>
             </div>
           </div>
-          <div className="footer-bottom-df">
-            <hr id="footer-bottom" />
-          </div>
+          <div className="footer-bottom-df"></div>
         </div>
       </div>
     </>
