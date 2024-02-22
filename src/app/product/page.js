@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import "./product.css";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -9,7 +9,7 @@ import image2 from "/public/image2.jpg";
 import image3 from "/public/image3.jpg";
 import image4 from "/public/image4.jpg";
 
-const page = () => {
+const ProductPage = () => {
   const [selectImage, setSelectImage] = useState(1);
   const [allImages, setAllImages] = useState([image1, image2, image3, image4]);
 
@@ -110,4 +110,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProductPage;
