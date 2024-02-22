@@ -1157,7 +1157,7 @@ form svg {
     display: grid;
     grid-template-columns: auto auto;
     margin-top: 5%;
-    margin-left: -6%;
+    margin-left: -4%;
   }
 
   .num {
@@ -1538,6 +1538,7 @@ form svg {
     border-radius: 8px;
     position: relative;
     z-index: 1;
+    margin-left: 10%;
   }
 
   form input {
