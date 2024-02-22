@@ -1217,7 +1217,7 @@ form svg {
   }
 
   .profile-trans {
-    transform: translateX(8%);
+    transform: translateX(5%);
   }
 
   .profile-info-right,
@@ -1572,7 +1572,7 @@ form svg {
 
   .footer-logo {
     display: flex;
-    justify-self: center;
+    justify-content: center;
   }
 
   .fotter-servcie li {
