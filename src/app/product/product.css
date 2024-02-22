@@ -1,0 +1,168 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Calibri";
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --heading-font: "calibrib";
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "calibribi";
+  src: url("/fonts/calibri-bold-italic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "calibri";
+  src: url("/fonts/calibri-regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibrib";
+  src: url("/fonts/calibri-bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "calibrit";
+  src: url("/fonts/calibri-italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+header {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 21px 3px 4px 3px;
+  width: 100%;
+  transition: all 0.2s ease-in;
+
+  box-shadow: rgba(246, 165, 102, 0.25) 0px 13px 27px -5px,
+    rgba(241, 208, 174, 0.3) 0px 8px 16px -8px;
+}
+
+.nav-scrolled {
+  z-index: 1000;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  box-shadow: rgb(255 141 9 / 24%) 0px 3px 8px;
+  align-items: baseline;
+  padding: 21px 3px 4px 3px;
+  width: 100%;
+  color: #000000;
+  transition: all 0.1s ease-in;
+}
+
+.nav-scrolled nav ul li a,
+.nav-scrolled .logo {
+  color: #015fa1;
+}
+
+nav ul {
+  display: flex;
+  margin-left: 30px;
+}
+
+nav ul li a {
+  font-size: 20px;
+  margin: 25px;
+  color: #000000;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  transition: 0.4s ease;
+  color: #f1850a;
+}
+
+nav ul li a:hover::before {
+  border: #f1850a;
+  content: "";
+  position: absolute;
+  bottom: 25%;
+  width: 60px;
+  border: 1px solid;
+  transition: all 0.1s ease;
+}
+
+#mobile-view {
+  display: none;
+}
+
+.product-page-banner {
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.product-page-right {
+  max-width: 35%;
+}
+
+.product-page-right p {
+  font-size: 19px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-scrolled nav ul li a {
+    font-size: 21px;
+    margin: 0;
+    color: #000000;
+  }
+
+  .nav-scrolled nav ul li a:hover {
+    color: #f1850a;
+  }
+
+  nav ul li a:hover::before {
+    display: none;
+  }
+
+  nav ul {
+    display: block;
+    position: absolute;
+    margin-top: 6%;
+    left: -150%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 60%;
+    z-index: 10;
+    transition: all 0.4s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  nav ul li {
+    margin-top: 15%;
+  }
+
+  .nav-scrolled {
+    height: 70px;
+    flex-direction: row-reverse;
+  }
+
+  #check:checked ~ nav ul {
+    left: -8%;
+  }
+}
