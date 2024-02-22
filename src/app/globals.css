@@ -144,6 +144,10 @@ nav ul li a:hover::before {
   transition: all 0.1s ease;
 }
 
+#mobile-view {
+  display: none;
+}
+
 .banner-img img {
   width: 100%;
   height: 745px;
@@ -516,6 +520,7 @@ nav ul li a:hover::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 3px solid #e6873b;
 }
 
 .review-header h1 {
@@ -930,6 +935,7 @@ form svg {
 }
 
 .option {
+  padding-top: 9px;
   width: 500px;
   height: 52px;
   display: flex;
@@ -1048,4 +1054,539 @@ form svg {
 
 .review-left h1 {
   margin-top: 18px;
+}
+
+#check,
+.checkbtn svg {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-scrolled nav ul li a {
+    font-size: 21px;
+    margin: 0;
+    color: #000000;
+  }
+
+  .nav-scrolled nav ul li a:hover {
+    color: #f1850a;
+  }
+
+  nav ul li a:hover::before {
+    display: none;
+  }
+
+  .banner-img img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo img {
+    margin-top: 0px;
+    margin-left: 35%;
+    width: 75px;
+    height: 42px;
+  }
+
+  .checkbtn svg {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 34%;
+    left: 5%;
+    display: block;
+  }
+
+  nav ul {
+    display: block;
+    position: absolute;
+    margin-top: 6%;
+    left: -150%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    width: 60%;
+    z-index: 10;
+    transition: all 0.4s ease;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
+  nav ul li {
+    margin-top: 15%;
+  }
+
+  .nav-scrolled {
+    height: 70px;
+    flex-direction: row-reverse;
+  }
+
+  #check:checked ~ nav ul {
+    left: -8%;
+  }
+
+  #desktop-view {
+    display: none;
+  }
+
+  #mobile-view {
+    display: block;
+  }
+
+  .banner-text {
+    position: absolute;
+    top: 44%;
+    left: 7%;
+    z-index: 1;
+  }
+
+  .banner-text h1 {
+    font-size: 3rem;
+  }
+
+  .quality-assurance p {
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .quality-assurance {
+    padding: 7px 0;
+  }
+
+  .trust-icons-df {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: 5%;
+  }
+
+  .num {
+    font-size: 2rem;
+    color: #f28409;
+  }
+
+  .trust-icons-df > div {
+    text-align: center;
+    width: 175px;
+    display: flex;
+    align-items: center;
+  }
+
+  .satisfied::after {
+    display: none;
+  }
+
+  .orders::after,
+  .employee::after {
+    content: "";
+    width: 1px;
+    height: 90px;
+    border: 0.5px solid #cecece;
+    position: absolute;
+    top: 10%;
+    right: -6%;
+  }
+
+  .orders::before {
+    content: "";
+    width: 134px;
+    height: 1px;
+    border: 0.5px solid #cecece;
+    position: absolute;
+    bottom: -7px;
+    left: 13%;
+  }
+
+  .satisfied::before {
+    content: "";
+    width: 134px;
+    height: 1px;
+    border: 0.5px solid #cecece;
+    position: absolute;
+    bottom: -26px;
+    right: 10%;
+  }
+
+  .trust-icons-df h4 {
+    font-size: 17px;
+    color: #054d84;
+    font-weight: bolder;
+  }
+
+  .employee,
+  .location {
+    margin-top: 7%;
+  }
+
+  .profile-trans {
+    transform: translateX(8%);
+  }
+
+  .profile-info-right,
+  .profile-info-left {
+    max-width: 100%;
+  }
+
+  .profile-info {
+    flex-direction: column;
+    padding: 5% 7%;
+    text-align: justify;
+  }
+
+  .profile-info-right {
+    margin-top: 25%;
+  }
+
+  .profile-info-right p:first-of-type {
+    margin-top: 6px;
+  }
+
+  .profile-info-right button {
+    margin-top: 8px;
+  }
+
+  .profile-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-header-blue {
+    margin-top: 3px;
+    width: 6px;
+    height: 27px;
+    background-color: #0080ff;
+  }
+
+  .profile-info-left {
+    margin-top: 10%;
+  }
+
+  .product-df > div {
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .product-details {
+    margin-top: 9%;
+    margin-left: 0;
+  }
+
+  #product2-detail {
+    margin-top: 4%;
+  }
+
+  .product-details ul li {
+    font-size: 17px;
+    margin-top: 6px;
+    list-style: disc;
+  }
+
+  .product-details button {
+    margin-top: 8px;
+  }
+
+  .product-details-button {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-details h3 {
+    font-size: 1.5rem;
+  }
+
+  .product-image img {
+    width: 47%;
+    height: 0%;
+    margin-left: 0;
+  }
+
+  .product-option h4 {
+    font-size: 16px;
+  }
+
+  .product {
+    padding: 2% 3%;
+  }
+
+  .product-image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .product-details-header h3 {
+    margin-left: 9px;
+  }
+
+  #finn-wall {
+    width: 60%;
+    margin-left: 0;
+  }
+
+  .product-details p {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  #product2-detail button {
+    margin-left: 0;
+  }
+
+  #product2-detail p:first-of-type {
+    margin-top: 10px;
+  }
+
+  .product2-detail-header h1 {
+    margin-left: 0;
+  }
+
+  #product2-detail {
+    margin-left: 0;
+  }
+
+  #product2-detail p {
+    font-size: 16px;
+  }
+
+  #product3-detail {
+    margin-left: 0;
+  }
+
+  #product3-detail p {
+    margin-left: 0;
+    margin-top: 10px;
+    max-width: 100%;
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .option {
+    height: 40px;
+  }
+
+  .map-img svg {
+    width: 100%;
+    height: 41vh;
+  }
+
+  .map-header h1 {
+    font-family: var(--heading-font);
+    text-align: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding-top: 3%;
+  }
+
+  #marker-one {
+    position: absolute;
+    top: 50%;
+    right: 37%;
+    width: 20px;
+    height: 20px;
+  }
+
+  #marker-two {
+    position: absolute;
+    top: 40%;
+    right: 43%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .information-one,
+  .information-two,
+  .information-three {
+    width: 51%;
+    height: 329px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: absolute;
+    top: 78%;
+    left: 2%;
+    padding: 5px;
+  }
+
+  .information-one-overlap-details h4,
+  .information-two-overlap-details h4,
+  .information-three-overlap-details h4 {
+    margin-top: 20px;
+    font-weight: bolder;
+    max-width: 90%;
+    margin-left: 4%;
+    color: #f1850a;
+    font-size: 14px;
+  }
+
+  .information-one-overlap-details p,
+  .information-two-overlap-details p,
+  .information-three-overlap-details p {
+    margin-top: 10px;
+    max-width: 90%;
+    margin-left: 4%;
+    font-size: 13px;
+  }
+
+  .information-one-overlap-img img,
+  .information-two-overlap-img img,
+  .information-three-overlap-img img {
+    width: 99%;
+    height: 140px;
+    margin-top: 5%;
+    margin-left: 0;
+  }
+
+  .map {
+    margin-top: 10%;
+    background-color: #f3f1f1;
+    position: relative;
+  }
+
+  .review {
+    margin-top: 65%;
+  }
+
+  .review-df {
+    width: 90%;
+    height: 450px;
+    border: 3px solid #e6873b;
+  }
+
+  .review-header h1::before {
+    content: "";
+    width: 6px;
+    height: 32px;
+    background-color: #0080ff;
+    position: absolute;
+    top: -2px;
+    left: -12px;
+  }
+
+  .review-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .review-header h1 {
+    max-width: 80%;
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: var(--heading-font);
+    margin-top: 10%;
+    position: relative;
+  }
+
+  .review-left img {
+    width: 120px;
+    height: 96px;
+  }
+
+  .review-left {
+    height: 168px;
+    text-align: center;
+    box-shadow: rgb(63 63 72 / 20%) 0px 7px 29px 0px;
+    padding: 2%;
+  }
+
+  .review-max {
+    flex-direction: column;
+    align-items: center;
+    padding: 2% 4%;
+  }
+
+  .review-right {
+    max-width: 100%;
+    margin-top: 6%;
+  }
+
+  .review-left h1 {
+    margin-top: 8px;
+    font-size: 22px;
+  }
+
+  .review-left h4 {
+    font-size: 14px;
+    margin-top: -5px;
+  }
+
+  .certification {
+    margin-top: 15%;
+  }
+
+  .certification img {
+    margin-top: 7%;
+    width: 150px;
+    height: 170px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form-left p {
+    font-size: 15px;
+  }
+
+  .form-right-overlap {
+    display: none;
+  }
+
+  .form-left {
+    max-width: 100%;
+  }
+
+  .form-left {
+    padding: 0 7%;
+  }
+
+  .footer-contact-form {
+    margin-top: 15%;
+  }
+
+  .certification-header h1 {
+    font-size: 2rem;
+  }
+
+  .form-header h1 {
+    font-size: 2.1rem;
+  }
+
+  .fotter-servcie {
+    margin-left: 10%;
+  }
+
+  .footer-contact {
+    max-width: 100%;
+    text-transform: capitalize;
+    margin-left: 8%;
+  }
+
+  .mobile-df {
+    display: flex;
+    justify-content: center;
+    gap: 11%;
+    margin-top: 10%;
+  }
+
+  .footer-logo {
+    display: flex;
+    justify-self: center;
+  }
+
+  .fotter-servcie li {
+    margin-top: 8px;
+    font-size: 16px;
+  }
+
+  .footer-contact li {
+    font-size: 15px;
+    margin-top: 10px;
+    font-family: "Catamaran";
+  }
+
+  .footer-df {
+    margin-bottom: 10%;
+  }
 }

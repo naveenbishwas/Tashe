@@ -142,6 +142,22 @@ export default function Home() {
               unoptimized
             ></Image>
           </div>
+          <input type="checkbox" name="" id="check" />
+          <label htmlFor="check" className="checkbtn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+              />
+            </svg>
+          </label>
           <nav>
             <ul>
               <li>
@@ -166,7 +182,18 @@ export default function Home() {
         <section className="banner">
           <div className="banner-img">
             <Image
+              id="desktop-view"
               src="/banner-img.jpeg"
+              width={100}
+              height={100}
+              alt="Banner Image"
+              objectFit="cover"
+              unoptimized
+            ></Image>
+
+            <Image
+              id="mobile-view"
+              src="/mobile-banner.png"
               width={100}
               height={100}
               alt="Banner Image"
@@ -195,7 +222,7 @@ export default function Home() {
             <div className="orders">
               <h4>No. of Transformers Order</h4>
               <h2 className="num" data-val="100">
-                {isVisible && "100"}
+                000
               </h2>
             </div>
             <div className="satisfied">
@@ -278,16 +305,18 @@ export default function Home() {
                   tank designs.{" "}
                 </p>
 
-                <button
-                  ref={profileButton}
-                  className={`${
-                    profileButtonIsVisible
-                      ? "animate__animated animate__bounce"
-                      : "animate__animated animate__bounce"
-                  }`}
-                >
-                  Read More
-                </button>
+                <div className="profile-btn">
+                  <button
+                    ref={profileButton}
+                    className={`${
+                      profileButtonIsVisible
+                        ? "animate__animated animate__bounce"
+                        : "animate__animated animate__bounce"
+                    }`}
+                  >
+                    Read More
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -362,7 +391,7 @@ export default function Home() {
                           : "animate__animated animate__jello"
                       }`}
                     >
-                      Learn More
+                      Read More
                     </button>
                   </div>
                 </div>
@@ -403,7 +432,15 @@ export default function Home() {
                     can be done as per requirements.
                   </p>
                   <div className="product-details-button">
-                    <button>Learn More</button>
+                    <button
+                      className={`${
+                        profileRightVisible
+                          ? "animate__animated animate__jello"
+                          : "animate__animated animate__jello"
+                      }`}
+                    >
+                      Read More
+                    </button>
                   </div>
                 </div>
               </div>
@@ -440,7 +477,15 @@ export default function Home() {
                     doloribus nisi repellendus molestiae voluptatum.
                   </p>
                   <div className="product-details-button">
-                    <button>Learn More</button>
+                    <button
+                      className={`${
+                        profileRightVisible
+                          ? "animate__animated animate__jello"
+                          : "animate__animated animate__jello"
+                      }`}
+                    >
+                      Read More
+                    </button>
                   </div>
                 </div>
               </div>
@@ -664,11 +709,16 @@ export default function Home() {
               <div className="review-right">
                 <div className="review-right-line"></div>
                 <h2>Client Name</h2>
-                <p>
+                <p id="desktop-view">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
                   optio culpa corrupti ex deleniti repellendus sit, accusamus
                   recusandae ipsum ratione repudiandae quo hic blanditiis sequi
                   deserunt quibusdam, enim dolores minus?
+                </p>
+
+                <p id="mobile-view">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                  optio culpa corrupti ex deleniti repellendus.
                 </p>
               </div>
             </div>
@@ -799,10 +849,16 @@ export default function Home() {
           <div className="footer-top-df">
             <hr id="footer-top" />
           </div>
-          <div className="footer-df">
+          <div id="desktop-view" className="footer-df">
             <div className="footer-left">
               <div className="footer-logo">
-                <h1>Tashe Logo</h1>
+                <Image
+                  src={"/tashe5.png"}
+                  alt="logo"
+                  width={100}
+                  height={50}
+                  unoptimized
+                ></Image>
               </div>
             </div>
 
@@ -830,6 +886,48 @@ export default function Home() {
               <li>
                 Email: <span id="footer-email">info@tashe.co.in</span>
               </li>
+            </div>
+          </div>
+
+          <div id="mobile-view" className="footer-df">
+            <div className="footer-left">
+              <div className="footer-logo">
+                <Image
+                  src={"/tashe5.png"}
+                  alt="logo"
+                  width={100}
+                  height={50}
+                  unoptimized
+                ></Image>
+              </div>
+            </div>
+
+            <div className="mobile-df">
+              <div className="fotter-servcie">
+                <h3>Our services</h3>
+                <li>Home</li>
+                <li>About us</li>
+                <li>Product</li>
+                <li>Contact us</li>
+                <li>Infrastructure</li>
+              </div>
+              <div className="footer-contact">
+                <h3>Tashe Power india pvt limited</h3>
+                <li>
+                  <b>Work</b> : F-194, Khushkhera industrial area,bhiwadi,
+                  district, alwar, rajasthan 301019(india)
+                </li>
+                <li>
+                  <b>regd</b> : address: r-616, new rajender nagar, new delhi
+                  110060(india)
+                </li>
+                <li>tel: +91 1493 250 709</li>
+                <li>M: +91 9711718600</li>
+                <li>
+                  Email: <span id="footer-email">info@tashe.co.in</span>
+                </li>
+              </div>
+              /
             </div>
           </div>
           <div className="footer-bottom-df"></div>
