@@ -1095,6 +1095,7 @@ form svg {
     top: 15%;
     left: 5%;
     display: block;
+    transition: all 0.6s ease;
   }
 
   nav ul {
@@ -1157,7 +1158,7 @@ form svg {
     display: grid;
     grid-template-columns: auto auto;
     margin-top: 5%;
-    margin-left: -4%;
+    margin-left: -3%;
   }
 
   .num {
@@ -1219,7 +1220,7 @@ form svg {
   }
 
   .profile-trans {
-    transform: translateX(5%);
+    transform: translateX(8%);
   }
 
   .profile-info-right,
@@ -1248,6 +1249,12 @@ form svg {
   .profile-btn {
     display: flex;
     justify-content: center;
+  }
+
+  .profile-info-right p {
+    font-size: 18px;
+    text-align: left;
+    word-spacing: 2px;
   }
 
   .profile-header-blue {
@@ -1401,7 +1408,7 @@ form svg {
   .information-two,
   .information-three {
     width: 51%;
-    height: 329px;
+    height: 360px;
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
       rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -1538,7 +1545,6 @@ form svg {
     border-radius: 8px;
     position: relative;
     z-index: 1;
-    margin-left: 10%;
   }
 
   form input {
@@ -1611,5 +1617,29 @@ form svg {
 
   .footer-df {
     margin-bottom: 10%;
+  }
+
+  #message {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .fotter-servcie li:first-of-type {
+    margin-top: 0;
+  }
+
+  .footer-contact li:first-of-type {
+    margin-top: 1%;
+  }
+
+  #cancel {
+    width: 28px;
+    margin-left: 5px;
   }
 }

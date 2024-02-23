@@ -17,6 +17,8 @@ export default function Home() {
   const [infoTwo, setInfoTwo] = useState(false);
 
   const [selectedOption, setSelectedOption] = useState(null);
+  const [showingHam, setShowingHam] = useState(true);
+  const [showingCan, setShowingCan] = useState(false);
 
   const { ref: profileImageOne, inView: ProfileImageOneVisibile } = useInView({
     threshold: 0,
@@ -129,6 +131,16 @@ export default function Home() {
     setInfoOne(false);
   };
 
+  const showingHandler = () => {
+    setShowingHam(false);
+    setShowingCan(true);
+  };
+
+  const cancelHandler = () => {
+    setShowingHam(true);
+    setShowingCan(false);
+  };
+
   return (
     <>
       <div className="main-conatiner">
@@ -144,19 +156,41 @@ export default function Home() {
           </div>
           <input type="checkbox" name="" id="check" />
           <label htmlFor="check" className="checkbtn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-list"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-              />
-            </svg>
+            {showingHam ? (
+              <svg
+                onClick={showingHandler}
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            ) : (
+              ""
+            )}
+
+            {showingCan ? (
+              <svg
+                onClick={cancelHandler}
+                id="cancel"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-lg"
+                viewBox="0 0 16 16"
+              >
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+              </svg>
+            ) : (
+              ""
+            )}
           </label>
           <nav>
             <ul>
@@ -900,9 +934,6 @@ export default function Home() {
                   unoptimized
                 ></Image>
               </div>
-            </div>
-
-            <div className="mobile-df">
               <div className="fotter-servcie">
                 <h3>Our services</h3>
                 <li>Home</li>
@@ -911,6 +942,9 @@ export default function Home() {
                 <li>Contact us</li>
                 <li>Infrastructure</li>
               </div>
+            </div>
+
+            <div className="mobile-df">
               <div className="footer-contact">
                 <h3>Tashe Power india pvt limited</h3>
                 <li>
@@ -927,7 +961,6 @@ export default function Home() {
                   Email: <span id="footer-email">info@tashe.co.in</span>
                 </li>
               </div>
-              /
             </div>
           </div>
           <div className="footer-bottom-df"></div>
