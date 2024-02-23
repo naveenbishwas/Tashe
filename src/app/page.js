@@ -439,7 +439,7 @@ export default function Home() {
                 <div className="product-image">
                   <Image
                     id="finn-wall"
-                    src={"/finn wall.png"}
+                    src={"/finn-wall.png"}
                     alt="product1"
                     width={100}
                     height={100}

@@ -1351,6 +1351,11 @@ form svg {
     margin-left: 0;
   }
 
+  .product-header h1 {
+    font-weight: bolder;
+    font-size: 1.8rem;
+  }
+
   #product2-detail {
     margin-left: 0;
   }
@@ -1369,6 +1374,12 @@ form svg {
     max-width: 100%;
     font-size: 16px;
     text-align: justify;
+  }
+
+  .aero img {
+    -webkit-clip-path: circle(50%);
+    clip-path: circle(36%);
+    margin-top: 20px;
   }
 
   .option {
