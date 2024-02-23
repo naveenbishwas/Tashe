@@ -37,17 +37,6 @@ body {
   border: 2px solid #f1850a;
 }
 
-.cursor-dot,
-.cursor-outline {
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 1001;
-}
-
 @font-face {
   font-family: "calibribi";
   src: url("/fonts/calibri-bold-italic.ttf");
@@ -869,18 +858,6 @@ form svg {
 
 #footer-email {
   text-transform: lowercase;
-}
-
-#linkedin {
-  color: #0273b2;
-}
-
-#youtube {
-  color: #ff0000;
-}
-
-#facebook {
-  color: #0e87ef;
 }
 
 #footer-top {
