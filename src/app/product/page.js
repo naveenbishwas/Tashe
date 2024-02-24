@@ -15,6 +15,14 @@ const ProductPage = () => {
   const [allImages, setAllImages] = useState([image1, image2, image3, image4]);
   const [showingHam, setShowingHam] = useState(true);
   const [showingCan, setShowingCan] = useState(false);
+  const [showDesign, setShowDesign] = useState(true);
+  const [showDiscover, setShowDiscover] = useState(false);
+  const [showDispatch, setShowDispatch] = useState(false);
+
+  const { ref: profileButton, inView: profileButtonIsVisible } = useInView({
+    threshold: 0,
+  });
+  const [activeTab, setActiveTab] = useState(null);
 
   const { ref: processAnimationOne, inView: isProcessOneVis } = useInView();
   const { ref: processAnimationTwo, inView: isProcessTwoVis } = useInView();
@@ -73,6 +81,30 @@ const ProductPage = () => {
   const cancelHandler = () => {
     setShowingHam(true);
     setShowingCan(false);
+  };
+
+  const showDesignHandler = () => {
+    setShowDiscover(false);
+    setShowDesign(true);
+    setShowDispatch(false);
+    setActiveTab("design");
+    console.log("naveen");
+  };
+
+  const showDiscoverHandler = () => {
+    setShowDiscover(true);
+    setShowDesign(false);
+    setShowDispatch(false);
+    setActiveTab("discover");
+    console.log("naveen");
+  };
+
+  const showDispatchHandler = () => {
+    setShowDiscover(false);
+    setShowDesign(false);
+    setShowDispatch(true);
+    setActiveTab("dispatch");
+    console.log("naveen");
   };
 
   return (
@@ -240,105 +272,152 @@ const ProductPage = () => {
         </div>
       </section>
 
-      <div className="three-d-header-name">
-        <div className="three-d-header">
-          <h1>Design</h1>
+      <section className="design-sec">
+        <div className="design-top-header">
+          <h1>3D Model</h1>
         </div>
-        <div className="three-d-header">
-          <h1>Discover</h1>
+
+        <div className="three-d-header-name">
+          <div
+            className={`three-d-header ${
+              activeTab === "design" ? "active" : ""
+            }`}
+            id="design-name"
+            onClick={showDesignHandler}
+          >
+            <h1>Design</h1>
+          </div>
+
+          <div
+            className={`three-d-header ${
+              activeTab === "discover" ? "active" : ""
+            }`}
+            id="discover-name"
+            onClick={showDiscoverHandler}
+          >
+            <h1>Discover</h1>
+          </div>
+          <div
+            className={`three-d-header ${
+              activeTab === "dispatch" ? "active" : ""
+            }`}
+            id="dispatch-name"
+            onClick={showDispatchHandler}
+          >
+            <h1>Dispatch</h1>
+          </div>
         </div>
-        <div className="three-d-header">
-          <h1>Dispatch</h1>
+
+        <div className="design-pos">
+          {showDesign ? (
+            <section className="design" id="design">
+              <div className="design-images">
+                <Image
+                  src={"/design1.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/design2.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/design3.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+              </div>
+            </section>
+          ) : (
+            ""
+          )}
+
+          {showDiscover ? (
+            <section className="design" id="discovery">
+              <div className="design-images">
+                <Image
+                  src={"/discover.jpeg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/discover2.jpeg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/discover3.jpeg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+              </div>
+            </section>
+          ) : (
+            ""
+          )}
+
+          {showDispatch ? (
+            <section className="design" id="dispatch">
+              <div className="design-images">
+                <Image
+                  src={"/design1.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/design1.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+
+                <Image
+                  src={"/design1.jpg"}
+                  alt="design-images"
+                  width={350}
+                  height={230}
+                  unoptimized
+                ></Image>
+              </div>
+            </section>
+          ) : (
+            ""
+          )}
         </div>
-      </div>
-
-      <div className="design-pos">
-        <section className="design" id="design">
-          <div className="design-images">
-            <Image
-              src={"/design1.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/design2.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/design3.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-          </div>
-        </section>
-
-        <section className="design" id="discovery">
-          <div className="design-images">
-            <Image
-              src={"/discover.jpeg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/discover2.jpeg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/discover3.jpeg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-          </div>
-        </section>
-
-        <section className="design" id="dispatch">
-          <div className="design-images">
-            <Image
-              src={"/design1.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/design1.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-
-            <Image
-              src={"/design1.jpg"}
-              alt="design-images"
-              width={350}
-              height={230}
-              unoptimized
-            ></Image>
-          </div>
-        </section>
-      </div>
+      </section>
 
       <section className="process-steps">
+        <div className="process-image">
+          <Image
+            src={"./process-water2.jpg"}
+            alt="Process-overlap-image"
+            width={100}
+            height={100}
+            unoptimized
+          ></Image>
+        </div>
+        <div className="process-color"></div>
         <div className="process-header">
           <h1>Our Manufacturing Process</h1>
         </div>
@@ -443,6 +522,98 @@ const ProductPage = () => {
             id="fourteen"
           >
             <h2>leakage test</h2>
+          </div>
+        </div>
+      </section>
+
+      <section className="footer-contact-form">
+        <div className="form">
+          <div className="form-left">
+            <p>
+              Get in Touch Have questions, feedback, or just want to say hello?
+              We re here to help! Fill out the form below and we ll get back to
+              you as soon as possible. Your inquiries are important to us, and
+              we strive to provide timely and helpful responses to all messages.
+              Thank you for reaching out!
+            </p>
+            <div className="form-header">
+              <Image
+                src={"/footer-call.png"}
+                alt="contac-img"
+                width={100}
+                height={100}
+                unoptimized
+              ></Image>
+              <h1>Contact Us</h1>
+            </div>
+          </div>
+          <div className="form-right-overlap"></div>
+
+          <div className="form-right">
+            <form action="" className="needs-validation">
+              <div className="form-top">
+                <div className="name-f was-validated">
+                  <input
+                    type="text"
+                    name=""
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+
+                <div className="email-f was-validated">
+                  <input
+                    type="email"
+                    name=""
+                    id="email"
+                    placeholder="example@gmail.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="company-name-f was-validated">
+                <input
+                  type="text"
+                  name=""
+                  id="company-name"
+                  placeholder="Company Name"
+                  required
+                />
+              </div>
+
+              <div className="phone-f was-validated">
+                <input
+                  type="tel"
+                  name=""
+                  id="phone-no"
+                  placeholder="Phone No"
+                  required
+                />
+              </div>
+
+              <div className="message-f was-validated">
+                <textarea
+                  name=""
+                  id="message"
+                  cols="39"
+                  rows="5"
+                  placeholder="your message here..."
+                ></textarea>
+              </div>
+              <div className="submit-btn">
+                <button
+                  ref={profileButton}
+                  className={`${
+                    profileButtonIsVisible
+                      ? "animate__animated animate__jello"
+                      : ""
+                  }`}
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </section>

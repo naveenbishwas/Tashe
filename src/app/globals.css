@@ -766,11 +766,16 @@ form svg {
   margin-top: 5px;
 }
 
+
+.form-left p {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
 .form-left img {
   width: 250px;
   height: 250px;
   margin-top: -8%;
-  display: none;
 }
 
 .form-right {

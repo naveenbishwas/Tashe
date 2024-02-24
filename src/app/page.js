@@ -798,15 +798,15 @@ export default function Home() {
                 messages. Thank you for reaching out!
               </p>
               <div className="form-header">
+                <Image
+                  src={"/footer-call.png"}
+                  alt="contac-img"
+                  width={100}
+                  height={100}
+                  unoptimized
+                ></Image>
                 <h1>Contact Us</h1>
               </div>
-              <Image
-                src={"/purple-contact.png"}
-                width={100}
-                height={100}
-                alt="contact-us"
-                unoptimized
-              ></Image>
             </div>
             <div className="form-right-overlap"></div>
 
