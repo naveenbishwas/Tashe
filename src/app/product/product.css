@@ -220,13 +220,14 @@ nav ul li a:hover::before {
 .three-d-header-name {
   display: flex;
   justify-content: center;
+  /* gap: 8%; */
   margin-top: 3%;
   align-items: center;
 }
 
 .three-d-header {
   border-bottom: 2px solid #2e79e2;
-  width: 335px;
+  width: 416px;
   text-align: center;
 }
 

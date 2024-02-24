@@ -166,7 +166,7 @@ const ProductPage = () => {
               <a href="#">About us</a>
             </li>
             <li>
-              <a href="#">Product</a>
+              <a href="/product">Product</a>
             </li>
             <li>
               <a href="#">Contact us</a>
