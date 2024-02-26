@@ -274,10 +274,70 @@ const ProductPage = () => {
 
       <section className="design-sec">
         <div className="design-top-header">
-          <h1>3D Model</h1>
+          <h1>Our 3D Model</h1>
         </div>
 
-        <div className="three-d-header-name">
+        <div className="three-d-models">
+          <div className="models" id="design">
+            <div className="model-df">
+              <div className="model-left">
+                <h1>Design</h1>
+              </div>
+              <div className="model-right">
+                <li>3d modeling</li>
+
+                <li>Design understanding and clarification</li>
+
+                <li>
+                  Finding out all possible raodblocks and amned the design and
+                  hassle free production
+                </li>
+
+                <li>Project procurement planning</li>
+              </div>
+            </div>
+          </div>
+
+          <div className="models" id="discover">
+            <div className="model-df">
+              <div className="model-left">
+                <h1>Discover</h1>
+              </div>
+              <div className="model-right">
+                <li>Prototype is made as per 3D modelling</li>
+                <li>
+                  All practical problems are addressed before going for mass
+                  production
+                </li>
+                <li>Inspection and testing as per approved/agreed methods</li>
+                <li>Approve and signoff for mass production</li>
+                <li>Production planning for the project</li>
+              </div>
+            </div>
+          </div>
+
+          <div className="models" id="delivery">
+            <div className="model-df">
+              <div className="model-left">
+                <h1>Delivery</h1>
+              </div>
+              <div className="model-right">
+                <li>Mass production as per agreed plan</li>
+                <li>Inspection and Testing as per prototype</li>
+                <li>
+                  Weekly porduction updates and sent so you can trace the stage
+                  wise timeliness
+                </li>
+                <li>
+                  Weekly trackers are sent so you can track and trace your
+                  shipments/documents
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="three-d-header-name">
           <div
             className={`three-d-header ${
               activeTab === "design" ? "active" : ""
@@ -306,9 +366,9 @@ const ProductPage = () => {
           >
             <h1>Dispatch</h1>
           </div>
-        </div>
+        </div> */}
 
-        <div className="design-pos">
+        {/* <div className="design-pos">
           {showDesign ? (
             <section className="design" id="design">
               <div className="design-images">
@@ -404,7 +464,7 @@ const ProductPage = () => {
           ) : (
             ""
           )}
-        </div>
+        </div> */}
       </section>
 
       <section className="process-steps">
