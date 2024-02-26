@@ -279,6 +279,13 @@ const ProductPage = () => {
 
         <div className="three-d-models">
           <div className="models" id="design">
+            <Image
+              src={"/3-d2.png"}
+              alt="design"
+              width={100}
+              height={100}
+              unoptimized
+            ></Image>
             <div className="model-df">
               <div className="model-left">
                 <h1>Design</h1>
@@ -299,6 +306,13 @@ const ProductPage = () => {
           </div>
 
           <div className="models" id="discover">
+            <Image
+              src={"/discover.png"}
+              alt="design"
+              width={100}
+              height={100}
+              unoptimized
+            ></Image>
             <div className="model-df">
               <div className="model-left">
                 <h1>Discover</h1>
@@ -317,6 +331,13 @@ const ProductPage = () => {
           </div>
 
           <div className="models" id="delivery">
+            <Image
+              src={"/container.png"}
+              alt="design"
+              width={100}
+              height={100}
+              unoptimized
+            ></Image>
             <div className="model-df">
               <div className="model-left">
                 <h1>Delivery</h1>
